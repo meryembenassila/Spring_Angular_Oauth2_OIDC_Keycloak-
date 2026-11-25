@@ -3,7 +3,8 @@
 ![img.png](img.png)
 
 ## Partie 1 : Mise en place de Keycloak et gestion de l'authentification avec OAuth 2.0 / OpenID Connect
-1. **Télécharger Keycloak 19**
+
+### 1. Télécharger Keycloak 19
 
 ![img_1.png](img_1.png)
 
@@ -90,3 +91,10 @@
    - Changer les paramètres des Tokens Access Token et Refresh Token
 
 ## Part 2 : Sécuriser une architecture  micro-service Spring Angular avec Keycloak :  
+### microservice inventory-service
+créer le microservice
+
+![img_23.png](img_23.png)
+tester 
+![img_24.png](img_24.png)
+![img_25.png](img_25.png)
