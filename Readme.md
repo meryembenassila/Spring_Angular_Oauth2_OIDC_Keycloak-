@@ -93,8 +93,53 @@
 ## Part 2 : Sécuriser une architecture  micro-service Spring Angular avec Keycloak :  
 ### microservice inventory-service
 créer le microservice
-
 ![img_23.png](img_23.png)
+on a  configurer  de la sécurité avec securityfilterchain et cross
 tester 
 ![img_24.png](img_24.png)
 ![img_25.png](img_25.png)
+
+créer le frontend angular
+![img_26.png](img_26.png)
+
+ona configure Spring Security comme Resource Server utilisant JWT avec la config par defaut
+apres creation de realme , client , users , roles 
+
+**Avec client http** :
+
+   - Tester l'authentification avec le mot de passe
+
+  ![img_27.png](img_27.png)
+
+
+   - Tester l'authentification avec le Refresh Token
+
+  ![img_28.png](img_28.png)
+
+   - Tester l'authentification avec Client ID et Client Secret
+
+   ![img_29.png](img_29.png)
+
+- récupérer les informations de l'utilisateur actuellement authentifié dans Spring Security
+
+![img_31.png](img_31.png)
+
+ - récupérer  products en utilsant jwt 
+
+![img_30.png](img_30.png)
+
+- on a ajouter JwtAuthConverter qui transforme le JWT en JwtAuthenticationToken en ajoutant les rôles Keycloak aux autorités Spring Security.
+
+   ![img_32.png](img_32.png)
+
+
+
+puis on a exigé  la des roles a des endpoint 
+test 
+- acces refusé a un endpoint qui necessite role ADMIN , et le jwt appartient a user  qui continet juste role USER
+
+![img_34.png](img_34.png)
+- acces accépté a un endpoint qui necessite role ADMIN , et le jwt appartient a user  qui continet  role USER,ADMIN
+
+![img_35.png](img_35.png)
+

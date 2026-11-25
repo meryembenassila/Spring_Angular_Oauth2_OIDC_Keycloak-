@@ -3,10 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
+import { Products } from './ui/products/products';
+import { Customers } from './ui/cutsomers/customers.component';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
 
 @NgModule({
-  declarations: [App],
-  imports: [BrowserModule, AppRoutingModule],
+  declarations: [App, Products, Customers],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [provideBrowserGlobalErrorListeners()],
   bootstrap: [App],
 })
